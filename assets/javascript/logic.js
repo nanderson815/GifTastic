@@ -1,19 +1,30 @@
 
-$(document).ready(function(){
+$(document).ready(function () {
 
-var sports = ["baseball", "soccer", "football", "hockey", "golf", "swimming", "Lacrosse", "tennis", "basketball"];
+    var sports = ["Baseball", "Soccer", "Football", "Hockey", "Golf", "Swimming", "Lacrosse", "Tennis", "Basketball"];
 
-function makeButtons(){
-    $(".sportButtons").empty();
-    for (sport in sports){
-    var newButton = $("<button>");
-    newButton.attr("data-name", sports[sport]);
-    newButton.text(sports[sport]);
-    $(".sportButtons").append(newButton);
+    function makeButtons() {
+        $(".sportButtons").empty();
+        for (sport in sports) {
+            var newButton = $("<button>");
+            newButton.attr("data-name", sports[sport]);
+            newButton.text(sports[sport]);
+            $(".sportButtons").append(newButton);
+        }
     }
-}
 
-makeButtons();
+    makeButtons();
 
+    $("#addSport").on("click", function (event) {
+        event.preventDefault();
+
+        var sport = $("#sportText").val().trim();
+        sports.push(sport);
+
+        makeButtons();
+
+        $("#sportText").val('');
+
+    });
 
 });
