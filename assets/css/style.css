@@ -1,0 +1,26 @@
+body {
+    margin: auto;
+    padding: 20px;
+
+}
+
+button {
+    margin: 10px 10px 10px 0px;
+    padding: 10px;
+    background: rgb(48, 130, 197);
+    color: white;
+    border: 1px solid rgb(48, 130, 197);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    width: 150px;
+    border-radius: 10px;
+    box-shadow: 5px 3px #ccc;
+}
+
+button:hover {
+    background: rgb(48, 130, 197, .8);
+    border: 1px solid rgb(48, 130, 197);
+    box-shadow: 7px 6px #ccc;
+
+
+}
