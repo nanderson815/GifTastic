@@ -18,13 +18,14 @@ $(document).ready(function () {
     $("#addSport").on("click", function (event) {
         event.preventDefault();
 
-        var sport = $("#sportText").val().trim();
-        sports.push(sport);
+        if ($("#sportText").val().length !== 0) {
+            var sport = $("#sportText").val().trim();
+            sports.push(sport);
 
-        makeButtons();
+            makeButtons();
 
-        $("#sportText").val('');
-
+            $("#sportText").val('');
+        }
     });
 
 });
