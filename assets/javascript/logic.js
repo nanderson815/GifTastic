@@ -32,11 +32,13 @@ $(document).ready(function () {
                 image.attr("data-still", response.data[i].images.original_still.url);
 
                 // set the SRC of IMG to data-still
-                image.attr("src", response.data[i].images.original_still.url)
+                image.attr("src", response.data[i].images.original_still.url);
 
                 // Grab the gif and set it as data-animated
                 image.attr("data-animated", response.data[i].images.original.url);
 
+                // Set data-state attribute to still
+                image.attr("data-state", "still");
 
                 // Append Img to the div.
                 gifDiv.append(image);
@@ -47,6 +49,19 @@ $(document).ready(function () {
 
         });
     }
+
+    function animateGifs(){
+        var state = $(this).attr("data-state");
+
+        if (state === "still"){
+            var animate = $(this).attr("data-animated");
+            $(this).attr("src", animate).attr("data-state", "animated");
+
+        } else {
+            var still = $(this).attr("data-still");
+            $(this).attr("src", still).attr("data-state", "still");
+        }
+    };
 
     function makeButtons() {
         $(".sportButtons").empty();
@@ -60,7 +75,6 @@ $(document).ready(function () {
     }
 
 
-
     $("#addSport").on("click", function (event) {
         event.preventDefault();
 
@@ -72,6 +86,9 @@ $(document).ready(function () {
     });
 
     $(document).on("click", ".sportButton", displaySportInfo);
+
+    $(document).on("click", "img", animateGifs);
+
 
     makeButtons();
 
