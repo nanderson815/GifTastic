@@ -4,8 +4,12 @@ body {
 
 }
 
+.container {
+    margin: 20px 10% 10%;
+}
+
 button {
-    margin: 10px 10px 10px 0px;
+    margin: 5px 10px 5px 0px;
     padding: 10px;
     background: rgb(48, 130, 197);
     color: white;
