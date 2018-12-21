@@ -29,7 +29,7 @@ $(document).ready(function () {
                 var image = $("<img>");
 
                 // Grab the still image and set it as data-still for IMG
-                image.attr("data-still", response.data[i].images.original_still).url;
+                image.attr("data-still", response.data[i].images.original_still.url);
 
                 // set the SRC of IMG to data-still
                 image.attr("src", response.data[i].images.original_still.url)
