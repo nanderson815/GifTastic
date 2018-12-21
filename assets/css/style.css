@@ -1,14 +1,14 @@
 body {
     margin: auto;
     padding: 20px;
-
+    background: url("https://www.toptal.com/designers/subtlepatterns/patterns/sports.png");
 }
 
 .container {
-    margin: 20px 10% 10%;
+    margin: 20px 5% 5%;
 }
 
-button {
+button, #addSport {
     margin: 5px 10px 5px 0px;
     padding: 10px;
     background: rgb(48, 130, 197);
@@ -16,15 +16,56 @@ button {
     border: 1px solid rgb(48, 130, 197);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 800;
-    width: 150px;
     border-radius: 10px;
     box-shadow: 5px 3px #ccc;
 }
 
-button:hover {
+#addSport {
+    width: 100px;
+}
+
+button:hover, #addSport:hover {
     background: rgb(48, 130, 197, .8);
     border: 1px solid rgb(48, 130, 197);
     box-shadow: 7px 6px #ccc;
+}
 
+form {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    color: rgb(48, 130, 197);
+    margin-bottom: 10px;
 
+}
+
+#sportText{
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    color: rgb(48, 130, 197);
+    width: 90%;
+    border-radius: 10px;
+}
+
+.sportGifs, .sportButtons, form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sportButtons{
+    margin-bottom: 20px;
+}
+
+.gifDiv {
+    margin: 5px;
+    border: 1px solid rgb(48, 130, 197);
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 100%;
+    background: white;
+}
+img{
+    max-width: 100%;
 }

@@ -24,6 +24,7 @@ $(document).ready(function () {
 
                 // Create an  div
                 var gifDiv = $("<div>");
+                gifDiv.addClass("gifDiv");
 
                 // Grab the rating and prepend to the div
                 var rating = response.data[i].rating;
