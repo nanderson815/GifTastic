@@ -3,16 +3,21 @@ $(document).ready(function () {
 
     var sports = ["Baseball", "Soccer", "Football", "Hockey", "Golf", "Swimming", "Lacrosse", "Tennis", "Basketball"];
 
+    var clickedSport;
+    var sport;
+    var offset = 0;
+
     function displaySportInfo() {
-        var sport = $(this).attr("data-name");
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + sport + "&api_key=zaEEu57nzDtnWvOM40Q8fAzHUftNNQfP&limit=10&raing=g";
+        sport = $(this).attr("data-name");
+        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + sport + "&api_key=zaEEu57nzDtnWvOM40Q8fAzHUftNNQfP&limit=10&rating=g&offset="+offset;
 
         $.ajax({
             url: queryURL,
             method: "GET",
         }).then(function (response) {
             console.log(response);
-            $(".sportGifs").empty();
+
+            emptyDiv();
 
             // for loop for all gifs grabbed in data.
             for (i = 0; i < response.data.length; i++) {
@@ -29,13 +34,13 @@ $(document).ready(function () {
                 var image = $("<img>");
 
                 // Grab the still image and set it as data-still for IMG
-                image.attr("data-still", response.data[i].images.original_still.url);
+                image.attr("data-still", response.data[i].images.fixed_height_still.url);
 
                 // set the SRC of IMG to data-still
-                image.attr("src", response.data[i].images.original_still.url);
+                image.attr("src", response.data[i].images.fixed_height_still.url);
 
                 // Grab the gif and set it as data-animated
-                image.attr("data-animated", response.data[i].images.original.url);
+                image.attr("data-animated", response.data[i].images.fixed_height.url);
 
                 // Set data-state attribute to still
                 image.attr("data-state", "still");
@@ -45,6 +50,9 @@ $(document).ready(function () {
 
                 // prepend gifDiv to the page
                 $(".sportGifs").prepend(gifDiv);
+
+                offset = offset + 10;
+                clickedSport = sport;
             }
 
         });
@@ -62,6 +70,13 @@ $(document).ready(function () {
             $(this).attr("src", still).attr("data-state", "still");
         }
     };
+
+    function emptyDiv() {
+        if (clickedSport !== sport) {
+            $(".sportGifs").empty();
+        }
+    };
+
 
     function makeButtons() {
         $(".sportButtons").empty();
