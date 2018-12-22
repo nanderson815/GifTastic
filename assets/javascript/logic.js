@@ -9,7 +9,7 @@ $(document).ready(function () {
 
     function displaySportInfo() {
         sport = $(this).attr("data-name");
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + sport + "&api_key=zaEEu57nzDtnWvOM40Q8fAzHUftNNQfP&limit=10&rating=g&offset="+offset;
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + sport + "&api_key=zaEEu57nzDtnWvOM40Q8fAzHUftNNQfP&limit=10&rating=g&offset="+offset;
 
         $.ajax({
             url: queryURL,
