@@ -54,6 +54,7 @@ $(document).ready(function () {
                 // prepend gifDiv to the page
                 $(".sportGifs").prepend(gifDiv);
 
+                // Offets by ten, so the next click will grab the next ten gifs
                 offset = offset + 10;
                 clickedSport = sport;
             }
@@ -61,6 +62,7 @@ $(document).ready(function () {
         });
     }
 
+    // Function to animate gifs. Toggles between moving and still images on click.
     function animateGifs(){
         var state = $(this).attr("data-state");
 
@@ -74,9 +76,11 @@ $(document).ready(function () {
         }
     };
 
+    // Empyts the gif Div if a new sport is selected.
     function emptyDiv() {
         if (clickedSport !== sport) {
             $(".sportGifs").empty();
+            offset = 0;
         }
     };
 
