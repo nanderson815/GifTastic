@@ -1,12 +1,14 @@
 
 $(document).ready(function () {
-
+    // Array that holds all sports for buttons.
     var sports = ["Baseball", "Soccer", "Football", "Hockey", "Golf", "Swimming", "Lacrosse", "Tennis", "Basketball"];
 
+    // Global vars
     var clickedSport;
     var sport;
     var offset = 0;
 
+    // Function to display gifs.
     function displaySportInfo() {
         sport = $(this).attr("data-name");
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + sport + "&api_key=zaEEu57nzDtnWvOM40Q8fAzHUftNNQfP&limit=10&rating=g&offset="+offset;
