@@ -11,7 +11,7 @@ $(document).ready(function () {
     // Function to display gifs.
     function displaySportInfo() {
         sport = $(this).attr("data-name");
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + sport + "&api_key=zaEEu57nzDtnWvOM40Q8fAzHUftNNQfP&limit=10&rating=g&offset="+offset;
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + sport + "&api_key=zaEEu57nzDtnWvOM40Q8fAzHUftNNQfP&limit=10&rating=g&offset=" + offset;
 
         $.ajax({
             url: queryURL,
@@ -30,7 +30,7 @@ $(document).ready(function () {
 
                 // Grab the rating and prepend to the div
                 var rating = response.data[i].rating;
-                var ratingDiv = $("<p>").text("Rating: "+rating);
+                var ratingDiv = $("<p>").text("Rating: " + rating);
                 gifDiv.prepend(ratingDiv);
 
                 // Create an image 
@@ -63,10 +63,10 @@ $(document).ready(function () {
     }
 
     // Function to animate gifs. Toggles between moving and still images on click.
-    function animateGifs(){
+    function animateGifs() {
         var state = $(this).attr("data-state");
 
-        if (state === "still"){
+        if (state === "still") {
             var animate = $(this).attr("data-animated");
             $(this).attr("src", animate).attr("data-state", "animated");
 
@@ -84,7 +84,7 @@ $(document).ready(function () {
         }
     };
 
-
+    // Function to create a button for each element in the sports array. 
     function makeButtons() {
         $(".sportButtons").empty();
         for (i in sports) {
@@ -96,7 +96,7 @@ $(document).ready(function () {
         }
     }
 
-
+    // function that will push new sport to the array if the input is not empty. 
     $("#addSport").on("click", function (event) {
         event.preventDefault();
 
