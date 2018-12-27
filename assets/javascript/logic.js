@@ -107,8 +107,10 @@ $(document).ready(function () {
         }
     });
 
+    // Runs the displaySport info function when class sportButton is clicked.
     $(document).on("click", ".sportButton", displaySportInfo);
 
+    // Animates the gif whenever an img is clicked.
     $(document).on("click", "img", animateGifs);
 
 
