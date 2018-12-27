@@ -113,7 +113,7 @@ $(document).ready(function () {
     // Animates the gif whenever an img is clicked.
     $(document).on("click", "img", animateGifs);
 
-
+    // Makes buttons on load. 
     makeButtons();
 
 
