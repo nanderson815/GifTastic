@@ -52,17 +52,18 @@ $(document).ready(function () {
                 gifDiv.append(image);
 
                 // Create Download Button.
-                var form = $("<form>");
-                form.attr("method","get");
-                form.attr("action", response.data[i].images.fixed_height.url);
+                // var form = $("<a>");
+                // form.attr("href", response.data[i].images.fixed_height.url);
+                // form.attr("download", response.data[i].title);
+                // form.text("Download!")
 
-                var button = $("<button>");
-                button.text("Download!");
-                button.attr("type", "submit");
+                // var button = $("<button>");
+                // button.text("Download!");
+                // button.attr("type", "button");
 
                 // Append button to form, form to gifDiv
-                form.append(button);
-                gifDiv.append(form);
+                // form.append(button);
+                // gifDiv.append(form);
 
                 // prepend gifDiv to the page
                 $(".sportGifs").prepend(gifDiv);
