@@ -42,7 +42,7 @@ form {
 
 }
 
-/* Page Text */
+/* Page Textg */
 #sportText{
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
@@ -52,16 +52,19 @@ form {
     border-radius: 10px;
 }
 
+/* Flex display the buttons and gifs on the page */
 .sportGifs, .sportButtons, form {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+/* Margin between buttons and rest of content */
 .sportButtons{
     margin-bottom: 20px;
 }
 
+/* Div to hold the gif, rating, and other info. */
 .gifDiv {
     margin: 5px;
     border: 1px solid rgb(48, 130, 197);

@@ -33,6 +33,11 @@ $(document).ready(function () {
                 var ratingDiv = $("<p>").text("Rating: " + rating);
                 gifDiv.prepend(ratingDiv);
 
+                // Grab the Title of the gif.
+                var title = response.data[i].title;
+                var titleDiv = $("<p>").text("Title: " + title).attr("class", "gifTitle");
+                gifDiv.prepend(titleDiv);
+
                 // Create an image 
                 var image = $("<img>");
 
