@@ -4,10 +4,12 @@ body {
     background: url("https://www.toptal.com/designers/subtlepatterns/patterns/sports.png");
 }
 
+/* Holds the page content */
 .container {
     margin: 20px 5% 5%;
 }
 
+/* Uniform styling for all buttons */
 button, #addSport {
     margin: 5px 10px 5px 0px;
     padding: 10px;
@@ -30,6 +32,7 @@ button:hover, #addSport:hover {
     box-shadow: 7px 6px #ccc;
 }
 
+/* Used in a form that is currently commented out in the logic.js file */
 form {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 800;
@@ -39,6 +42,7 @@ form {
 
 }
 
+/* Page Text */
 #sportText{
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
