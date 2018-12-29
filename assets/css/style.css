@@ -52,6 +52,11 @@ form {
     border-radius: 10px;
 }
 
+.gifTitle{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
 /* Flex display the buttons and gifs on the page */
 .sportGifs, .sportButtons, form {
     display: flex;

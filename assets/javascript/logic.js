@@ -35,7 +35,7 @@ $(document).ready(function () {
 
                 // Grab the Title of the gif.
                 var title = response.data[i].title;
-                var titleDiv = $("<p>").text("Title: " + title).attr("class", "gifTitle");
+                var titleDiv = $("<p>").html("<strong>Title: </strong>" + title).attr("class", "gifTitle");
                 gifDiv.prepend(titleDiv);
 
                 // Create an image 
