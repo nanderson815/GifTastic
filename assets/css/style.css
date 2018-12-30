@@ -52,6 +52,7 @@ form {
     border-radius: 10px;
 }
 
+/* Styles the title of each gif in the gifdiv. */
 .gifTitle{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
@@ -78,6 +79,8 @@ form {
     max-width: 100%;
     background: white;
 }
+
+/* Sets image to shirnk on smaller screens. */
 img{
     max-width: 100%;
 }
