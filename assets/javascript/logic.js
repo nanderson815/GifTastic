@@ -19,6 +19,7 @@ $(document).ready(function () {
         }).then(function (response) {
             console.log(response);
 
+            // Clears the gifs if a new sport is clicked. 
             emptyDiv();
 
             // for loop for all gifs grabbed in data.
