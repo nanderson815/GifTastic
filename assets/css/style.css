@@ -26,6 +26,7 @@ button, #addSport {
     width: 100px;
 }
 
+/* Styles the buttons on hover */
 button:hover, #addSport:hover {
     background: rgb(48, 130, 197, .8);
     border: 1px solid rgb(48, 130, 197);
