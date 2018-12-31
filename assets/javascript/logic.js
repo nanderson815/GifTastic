@@ -57,6 +57,8 @@ $(document).ready(function () {
                 // Append Img to the div.
                 gifDiv.append(image);
 
+                // --------------- Download Button code -- not working due to chrome blocking third party URL downloads with <a> tag --------
+
                 // Create Download Button.
                 // var form = $("<a>");
                 // form.attr("href", response.data[i].images.fixed_height.url);
@@ -70,6 +72,8 @@ $(document).ready(function () {
                 // Append button to form, form to gifDiv
                 // form.append(button);
                 // gifDiv.append(form);
+
+                // ------------------ End Download button Code ----------------------------
 
                 // prepend gifDiv to the page
                 $(".sportGifs").prepend(gifDiv);
