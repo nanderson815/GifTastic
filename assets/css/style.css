@@ -22,6 +22,7 @@ button, #addSport {
     box-shadow: 5px 3px #ccc;
 }
 
+/* Sets width of add sport button to make it more prominant */
 #addSport {
     width: 100px;
 }
