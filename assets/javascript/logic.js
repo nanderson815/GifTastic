@@ -4,8 +4,12 @@ $(document).ready(function () {
     var sports = ["Baseball", "Soccer", "Football", "Hockey", "Golf", "Swimming", "Lacrosse", "Tennis", "Basketball"];
 
     // Global vars
+
+    // Stores the last clicked sport 
     var clickedSport;
+    // Stores the currently clicked sport
     var sport;
+    // Offest stores the number of gifs already returned for a certian sport
     var offset = 0;
 
     // Function to display gifs.
